@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando uma tabela completa</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 700px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        caption{
+            border: 1px solid black;
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            padding: 9px;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 9px;
+        }
+        th{
+            background-color: greenyellow;
+        }
+        td.nome{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Criando uma tabela completa</h1>
+        <table>
+            <caption>FILMES FAVORITOS</caption>
+            <thead>
+                <tr>
+                    <th scope="col">GRUPO</th>
+                    <th scope="col">NOMES</th>
+                    <th scope="colgroup" colspan="3">FILMES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">MULHERES</th>
+                    <td class="nome">Ana Maria Santos</td>
+                    <td>Alien</td>
+                    <td>hambu</td>
+                    <td>vingadores</td>
+                </tr>
+                <tr>
+                    <td class="nome">Beatriz Sousa</td>
+                    <td>hulk</td>
+                    <td>inception</td>
+                    <td>batman</td>
+                </tr>
+                <tr>
+                    <td class="nome">Cláudia Melo</td>
+                    <td>Oblivion</td>
+                    <td>matrix</td>
+                    <td>big hero</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">HOMENS</th>
+                    <td class="nome">Bruno Mendonça</td>
+                    <td>intocáveis</td>
+                    <td>amnésia</td>
+                    <td>gladiador</td>
+                </tr>
+                <tr>
+                    <td class="nome">Daniel Lourenço</td>
+                    <td>wall-e</td>
+                    <td>oldboy</td>
+                    <td>dangal</td>
+                </tr>
+                <tr>
+                    <td class="nome">Fabiano Mota</td>
+                    <td>star wars 5</td>
+                    <td>taxi driver</td>
+                    <td>toy story</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
