@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1A6DF1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div#container{
+    background-color: white;
+    width: 1200px;
+    margin: auto;
+    border-radius: 0px 0px 6px 6px;
+    padding: 32px;
+}
+h2{
+    text-align: center;
+    margin: 8px;
+}
+section{
+    border-top: 2px solid #1a6cfa2f;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+div.box{
+    margin: 8px 20px;
+}
+#box-sexo{
+    display: flex;
+    align-items: center;
+}
+#box-sexo div{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-left: 6px;
+}
+#box-sexo div input{
+    margin-left: 9px;
+}
+input{
+    height: 29px;
+    font-size: 16px;
+    padding-left: 4px;
+}
+input:focus{
+    outline: none
+}
+.destaque{
+    font-weight: bold;
+}
+input[type="radio"]{
+    display: none;
+}
+#section2 .box{
+    width: 100%;
+}
+ul.lista{
+    list-style-type: none;
+    column-count: 3;
+    width: 100%;
+}
+ul.lista li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#section3{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#section3 .box, #section4 .box{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+#section3 .box div{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+#section4{
+    flex-direction: column;
+}
+#section4 .box div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+#inome, #estado-nasceu, #municipio-nasceu, #ipais-nasceu{
+    width: 460px;
+}
+#inis{
+    width: 140px;
+}   
+#iapelido{
+    width: 300px;
+}
+#imae, #ipai{
+    width: 500px;
+}
