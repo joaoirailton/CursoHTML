@@ -54,6 +54,13 @@ input:focus{
 input[type="radio"]{
     display: none;
 }
+input[type="radio"]::after{
+    content: "j";
+    width: 30px;
+    height: 30px;
+    background-color: gold;
+
+}
 #section2 .box{
     width: 100%;
 }

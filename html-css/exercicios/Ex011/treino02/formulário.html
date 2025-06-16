@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro pessoal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1 class="enfase">CADASTRO DE PROFISSIONAIS</h1>
+        <form action="../cadastro.php">
+            <fieldset>
+                <legend class="enfase">Dados pessoais</legend>
+                <label for="inome">Nome: <input type="text" name="nome" id="inome" required autocomplete="name" maxlength="40" placeholder="Nome completo"></label>
+                <label for="iendereco">Endereco: <input type="text" name="endereco" id="iendereco" required maxlength="70" placeholder="Tv. fulano de tal, n˚000 - bairro: sei la" autocomplete="street-address"></label>
+                <label for="iestado">Estado:
+                    <select name="estado" id="iestado">
+                        <option value="amazonas">AMAZÔNAS</option>
+                        <option value="acre">ÁCRE</option>
+                        <option value="roraima">RORAIMA</option>
+                        <option value="rondonha">RONDONHA</option>
+                        <option value="amapa">AMAPÁ</option>
+                        <option value="para">PARÁ</option>
+                        <option value="tocantins">TOCANTINS</option>
+                    </select>
+                </label>
+                <label for="icidade">Cidade:
+                    <select name="cidade" id="icidade">
+                        <option value="obidos">Óbidos</option>
+                        <option value="curua">Curuá</option>
+                        <option value="montealegre">Monte Alegre</option>
+                        <option value="manaus">Manaus</option>
+                        <option value="oriximina">Oriximina</option>
+                        <option value="atuman">Atumam</option>
+                        <option value="breves">Breves</option>
+                        <option value="belem">Belém</option>
+                        <option value="trombetas">Trombetas</option>
+                        <option value="alenquer">Alenquer</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend class="enfase">Dados profissionais</legend>
+                <section>
+                    <label class="enfase" id="icargo" for="icargo">Natureza do cargo:</label>
+                    <ul class="list-cargo-area">
+                        <li><input type="radio" name="icargo" value="gerente"><label for="gerente">Gerente</label></li>
+                        <li><input type="radio" name="icargo" value="financeiro"> <label for="financeiro">Financeiro</label></li>
+                        <li><input type="radio" name="icargo" value="recepcao"> <label for="recepcao">Recepção</label></li>
+                        <li><input type="radio" name="icargo" value="administrativo"> <label for="administrativo">Administrativo</label></li>
+                        <li><input type="radio" name="icargo" value="juridico"> <label for="juridico">Jurídico</label></li>
+                    </ul>
+                </section>
+                <section>
+                    <label class="enfase" for="area">Área de interesse:</label>
+                    <ul class="list-cargo-area">
+                        <li><input type="checkbox" name="area" id="computacao"> <label for="computacao">Computação</label></li>
+                        <li><input type="checkbox" name="area" id="biologia"> <label for="biologia">Biologia</label></li>
+                        <li><input type="checkbox" name="area" id="meio-ambiente"> <label for="meio-ambiente">Meio Ambiente</label></li>
+                        <li><input type="checkbox" name="area" id="engenharia"> <label for="engenharia">Engenharia</label></li>
+                        <li><input type="checkbox" name="area" id="historia"> <label for="historia">História</label></li>
+                    </ul>
+                    
+                    <label for="iobjetivo">Objetivo:
+                        <textarea name="objetivo" id="iobjetivo" cols="50" rows="5"></textarea>
+                    </label>
+                </section>
+            </fieldset>
+            <input type="submit" value="Salvar">
+            <input type="reset" value="Limpar">
+        </form>
+    </main>
+</body>
+</html>

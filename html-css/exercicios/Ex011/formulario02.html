@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+        div#container{
+            box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.327);
+            padding: 12px;
+            border-radius: 6px;
+            margin: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CADASTRANDO ALUNO E NOTAS</h1>
+    <form action="cadastro.php" method="get">
+        <div id="container">
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" required placeholder="Nome completo" maxlength="40" autocomplete="on">
+            </p>
+            <p>
+                <label for="imedia">Média</label>
+                <input type="number" name="media" id="imedia" min="0" max="10" value="5" step="0.1" required>
+            </p>
+            <p>
+                <label for="iperiodo">Período letivo</label>
+                <input type="month" name="periodo" id="iperiodo" value="2025-06" required>
+            </p>
+            <p>
+                <label for="idia-prova">Dia da prova</label>
+                <input type="date" name="dia-prova" id="idia-prova" value="2025-06-12">
+            </p>
+            <p>
+                <label for="ihora">Horário da prova</label>
+                <input type="time" name="hora" id="ihora">
+            </p>
+        </div>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
