@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>FAÇA SEU CADASTRO</h1>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <div class="box">
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" required autocomplete="name" placeholder="seu primeiro nome" maxlength="40">
+            </div>
+            <div class="box">
+                <label for="isobrenome">sobrenome:</label>
+                <input type="text" name="sobrenome" id="isobrenome" required placeholder="segundo nome" maxlength="40" autocomplete="name">
+            </div>
+            <div class="box">
+                <label for="isenha">Senha: </label>
+                <input type="password" name="senha" id="isenha" placeholder="sua senha" autocomplete="current-password" minlength="6" maxlength="8">
+            </div>
+            <div class="box"> 
+                <input class="btn" type="submit" value="Enviar">
+                <input class="btn" type="reset" value="Limpar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

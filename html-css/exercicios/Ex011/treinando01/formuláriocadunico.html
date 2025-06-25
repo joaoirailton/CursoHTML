@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>praticando formulários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <h2>IDENTIFICAÇÃO DA PESSOA</h2>
+            <section id="section1">
+                <div class="box">
+                    <label class="destaque" for="inome">4.02 - Nome completo: </label>
+                    <input type="text" name="nome" id="inome" autocomplete="name" maxlength="50" placeholder="digite seu nome" required>
+                </div>
+                <div class="box">
+                    <label class="destaque" for="inis">4.03 - Identificação (NIS/PIS/PASEP): </label>
+                    <input type="text" name="nis" id="inis" maxlength="14" minlength="14" size="14" required>
+                </div>
+                <div class="box">
+                    <label class="destaque" for="iapelido">4.04 - Apelido: </label>
+                    <input type="text" name="apelido" id="iapelido" placeholder="digite seu apelido" maxlength="50" autocomplete="nickname">
+                </div>
+                <div class="box" id="box-sexo">
+                    <label class="destaque" for="sexo">4.05 - Sexo: </label>
+                    <div>
+                        <input type="radio" name="sexo" id="isexo-m" value="Masculino" required autocomplete="sex">
+                        <label for="isexo-m">Masculino</label>
+                        <input type="radio" name="sexo" id="isexo-f" value="Feminino">
+                        <label for="isexo-f">Feminino</label>
+                    </div>
+                </div>
+                <div class="box">
+                    <label class="destaque" for="inascimento">4.06 - Data de nascimento: </label>
+                    <input type="date" name="nascimento" id="inascimento" required>
+                </div>
+            </section>
+            <section id="section2">
+                <div class="box">
+                    <label class="destaque" for="parentesco">4.07 - Relação de parentesco (nome) com a pessoa Responsável pela Unidade Familiar - RF: </label>
+                    <div>
+                        <ul class="lista">
+                            <li>
+                                <input type="radio" name="parentesco" id="rf" required>
+                                <label for="rf">1 - Pessoa Responsável pela Unidade Familiar - RF</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="parentesco" id="conjuge">
+                                <label for="conjuge">2 - Cônjuge ou companheiro(a)</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="parentesco" id="filho">
+                                <label for="filho">3 - Filho(a)</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="parentesco" id="enteado">
+                                <label for="enteado">4 - Enteado(a)</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="parentesco" id="neto">
+                                <label for="neto">5 - Neto(a) ou bisneto(a)</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="parentesco" id="pai-mae">
+                                <label for="pai-mae">6 - Pai ou mãe</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="parentesco" id="sogro">
+                                <label for="sogro">7 - Sogro(a)</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="parentesco" id="irmao">
+                                <label for="irmao">8 - Irmão ou irmã</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="parentesco" id="genro">
+                                <label for="genro">9 - Genro ou nora</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="parentesco" id="outro">
+                                <label for="outro">10 - Outro parente</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="parentesco" id="nao-parente">
+                                <label for="nao-parente">11 - Não parente</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box" id="cor">
+                    <label class="destaque" for="cor">4.08 - Cor ou raça </label>
+                    <div>
+                        <ul class="lista">
+                            <li>
+                                <input type="radio" name="cor" id="branca" required>
+                                <label for="branca">1 - Branca</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cor" id="preta">
+                                <label for="preta">2 - Preta</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cor" id="amarela">
+                                <label for="amarela">3 - Amarela</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cor" id="parda">
+                                <label for="parda">4 - Parda</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="cor" id="indio">
+                                <label for="indio">5 - Indígena</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="section3">
+                <div class="box">
+                    <label class="destaque" for="imae">4.09 - Nome completo da mãe </label>
+                    <input type="text" name="mae" id="imae" required maxlength="50" placeholder="digite aqui">
+                    <div>
+                        <input type="checkbox" name="nao-sabe" id="inao-sabe">
+                        <label for="inao-sabe">2 - Não sabe</label>
+                    </div>
+                </div>
+                <div class="box">
+                    <label class="destaque" for="ipai">4.10 - Nome completo do pai </label>
+                    <input type="text" name="pai" id="ipai" placeholder="digite aqui" maxlength="50">
+                    <div>
+                        <input type="checkbox" name="nao-sabe" id="inao-sabe">
+                        <label for="inao-sabe">2 - Não sabe</label>
+                    </div>
+                </div>
+            </section>
+            <section id="section4">
+                <div class="box">
+                    <label class="destaque" for="local-nasceu">4.11 - Onde (nome) nasceu? </label>
+                    <div>
+                        <ul class="lista">
+                            <li>
+                                <input type="radio" name="local-nasceu" id="neste-municipio" required>
+                                <label for="neste-municipio">1 - Neste município - Passe ao 4.15</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="local-nasceu" id="outro-municipio">
+                                <label for="outro-municipio">2 - Em outro município</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="local-nasceu" id="outro-pais">
+                                <label for="outro-pais">3 - Em outro país - Passe ao 4.14</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box">
+                    <label class="destaque" for="estado-nasceu">4.12 - Em que estado (nome) nasceu?</label>
+                    <input type="text" name="estado" id="estado-nasceu">
+                    <div>
+                        <input type="checkbox" name="nao-sabe" id="inao-sabe">
+                        <label for="inao-sabe">2 - Não sabe</label>
+                    </div>
+                </div>
+                <div class="box">
+                    <label class="destaque" for="municipio-nasceu">4.13 - Em que município (nome) nasceu? </label>
+                    <input type="text" name="municipio" id="municipio-nasceu">
+                    <div>
+                        <input type="checkbox" name="nao-sabe" id="inao-sabe">
+                        <label for="inao-sabe">2 - Não sabe</label>
+                    </div>
+                </div>
+                <div class="box">
+                    <label class="destaque" for="pais-nasceu">4.14 - Em que país estrangeiro (nome) nasceu? </label>
+                    <input type="text" name="pais" id="ipais-nasceu">
+                    <div>
+                        <input type="checkbox" name="nao-sabe" id="inao-sabe">
+                        <label for="inao-sabe">2 - Não sabe</label>
+                    </div>
+                </div>
+                <div class="box">
+                    <label class="destaque" for="registro-civil">4.15 - O nascimento (nome) foi registrado em Cartório de Registro Civil? </label>
+                    <div>
+                        <ul class="lista">
+                            <li>
+                                <input type="radio" name="registro-civil" id="sim-tem" required>
+                                <label for="sim-tem">1 - Sim e tem Certidão de Nascimento</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="registro-civil" id="sim-naotem">
+                                <label for="sim-naotem">2 - Sim, mas não tem Certidão de Nascimento</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="registro-civil" id="nao">
+                                <label for="nao">3 - Não</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="registro-civil" id="nao-sabe">
+                                <label for="nao-sabe">4 - Não sabe</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" value="Salvar e continuar">
+                </div>
+            </section>
+        </form>
+    </div>
+</body>
+</html>
