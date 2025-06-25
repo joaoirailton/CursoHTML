@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    
+            background-color: #adabaa;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main{
+            height: 1vh;
+    
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            display: block;
+            width: 200px;
+            padding: 10px;
+            border-bottom: 1px solid #e48983;
+            text-align: center;
+            transition: .2s ease;
+        }
+        a:hover{
+            background-color: #de5046;
+        }
+        div#container{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            align-items: center;
+            margin: auto;
+            color: white;
+        }
+        #box1{
+            background-color: #de5046;
+            border-radius: 5px 5px 0px 0px;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+        }
+        #box1:active + #box2{
+            display: block;
+        }
+        #box1 > img{
+            width: 100%;
+        }
+        #box2{
+            width: 100%;
+            display: none;
+            background-color: #60322b;
+            border-radius: 0px 0px 5px 5px;
+        }
+        ul{
+            list-style-type: none;
+        }
+        ul li{
+            
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div id="container">
+            <div id="box1">
+                <h2>COMPRAS</h2>
+                <img src="../../imagem.png" alt="carrinho de compras">
+            </div>
+            <div id="box2">
+                <ul>
+                    <li><a href="#">item 01</a></li>
+                    <li><a href="#">item 02</a></li>
+                    <li><a href="#">item 03</a></li>
+                    <li><a href="#">item 04</a></li>
+                    <li><a href="#">item 05</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
