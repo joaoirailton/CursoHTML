@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Perssonalizado</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Patrick Hand', cursive;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-image: url(paisagem.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #594E14;
+            font-size: 20px;
+        }
+        h2{
+            font-family: 'Rock Salt', sans-serif;
+            color: #F29F05;
+            font-size: 40px;
+        }
+        section{
+            background-color: #fffff7;
+            max-width: 550px;
+            margin: auto;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.34);
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form p{
+            text-align: center;
+            margin: 20px;
+        }
+        div.input{
+            position: relative;
+        }
+        .input > input{
+            width: 380px;
+            height: 36px;
+            margin: 20px 0px;
+            border: none;
+            padding: 5px;
+            border-bottom: 3px solid #F29F05;
+            outline: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        label{
+            position: absolute;
+            top: 20px;
+            left: 5px;
+            color: #594d14b3;
+            cursor: text;
+            transition: .3s;
+        }
+        .input > input:valid ~ label,
+        .input > input:focus ~ label{
+            transform: translateY(-25px);
+            font-size: 15px;
+        }
+        #botao input{
+            padding: 12px 34px;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #594E14;
+            border: none;
+            border-radius: 4px;
+            background-color: #F2CB05;
+            transition: .2s;
+        }
+        #botao input:hover{
+            background-color: #F29F05;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form action="dados.php" method="post">
+            <h2>Entre em contato</h2>
+            <p>Preencha o formulário abaixo e entraremos em contato com você.</p>
+            <div class="input" autocomplete="on">
+                <input type="text" name="nome" id="inome" required maxlength="40" minlength="3" autocomplete="name">
+                <label for="inome">Seu nome completo</label>
+            </div>
+            <div class="input">
+                <input type="email" name="email" id="iemail" required maxlength="30" minlength="12" autocomplete="email">
+                <label for="iemail">Seu E-mail</label>
+            </div>
+            <div class="input">
+                <input type="tel" name="telefone" id="itelefone" required maxlength="11" minlength="10" autocomplete="tel">
+                <label for="itelefone">Seu telefone</label>
+            </div>
+            <div id="botao">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </section>
+</body>
+</html>
