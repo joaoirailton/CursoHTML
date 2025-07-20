@@ -35,6 +35,9 @@
             margin: auto;
             color: white;
         }
+        #box2.exibir{
+            display: block;
+        }
         #box1{
             background-color: #de5046;
             border-radius: 5px 5px 0px 0px;
@@ -42,9 +45,7 @@
             text-align: center;
             cursor: pointer;
         }
-        #box1:active + #box2{
-            display: block;
-        }
+
         #box1 > img{
             width: 100%;
         }
@@ -81,5 +82,17 @@
             </div>
         </div>
     </main>
+    <script>
+        const btnCompras = document.getElementById('box1');
+        const box2 = document.querySelector('#box2');
+
+        btnCompras.addEventListener('click', ()=>{
+            box2.classList.toggle('exibir');
+        });
+
+
+
+
+    </script>
 </body>
 </html>
