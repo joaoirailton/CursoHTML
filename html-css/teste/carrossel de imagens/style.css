@@ -1,0 +1,295 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+
+/*ESTILOS GERAIS*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+--cor1: #B0D1D9;
+--cor2: #41A8BF;
+--cor3: #F2B077;
+--cor4: #734226;
+--cor5: #A66946;
+--font1: "Galada";
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor3);
+    width: 100%;
+    height: ;
+    overflow-x: hidden;
+}
+
+
+/*ESTILOS DE CABEÇA*/
+header{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0px;
+    margin-bottom: 100px;
+}
+#logo h1{
+    font-family: var(--font1);
+    font-size: 50px;
+    color: var(--cor2);
+}
+nav, ul{
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+nav li{
+    position: relative;
+}
+nav a{
+    color: var(--cor2);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .2s;
+}
+nav a::before{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: var(--cor5);
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    transition: width .2s ease;
+}
+nav a:hover::before{
+    width: 100%;
+}
+nav a:hover{
+    color: var(--cor5);
+}
+
+/*ESTILOS DE CONTEÚDO*/
+main{
+    position: relative;
+    height: 676px;
+}
+main::after{
+    content: '';
+    width: 70px;
+    height: 70px;
+    background-color: #7f4a2c;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    box-shadow: 0px 0px 333px 306px var(--cor4);
+    z-index: 0;
+    animation: anime 4s ease-in-out alternate infinite;
+}
+section.bloco{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 0px 100px;
+    opacity: 0;
+    z-index: 1;
+    /*ANIMAÇÃO*/
+    transform: translateX(100vh);
+    transition: transform .7s ease-in-out, opacity .7s;
+}
+section.ativa{
+    opacity: 1;
+    transform: translateX(0);
+}
+.imagem{
+    padding: 30px;
+}
+.imagem img{
+    max-width: 400px;
+
+    /*ANICAÇÃO*/
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform .3s ease-out, opacity .5s ease;
+}
+.ativa .imagem img{
+    transform: translateX(0px);
+    opacity: 1;
+    transition-delay: .5s;
+}
+.conteudo h2{
+    font-size: 37px;
+    color: white;
+    z-index: 1;
+    /*ANIMAÇÃO*/
+    transform: translateX(160px);
+    opacity: 0;
+    transition: transform .3s ease-out, opacity .5s ease;
+}
+.ativa .conteudo h2{
+    transform: translateX(0px);
+    opacity: 1;
+    transition-delay: .7s;
+}
+.conteudo p{
+    font-size: 20px;
+    margin: 30px 0px;
+    color: white;
+    z-index: 1;
+    /*ANIMAÇÃO*/
+    transform: translateX(300px);
+    opacity: 0;
+    transition: transform .7s ease-in-out, opacity .7s ease;
+}
+.ativa .conteudo p{
+    transform: translateX(0px);
+    opacity: 1;
+    transition-delay: .5s;
+}
+.btn-mais{
+    border: none;
+    border-radius: 50px;
+    background-color: var(--cor2);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: .2s;
+}
+.btn-mais:hover{
+    background-color: var(--cor1);
+    color: black;
+}
+/*.conteudo::after{
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--cor1);
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    z-index: 0;
+}*/
+section#setas{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    padding: 40px;
+}
+button.btn-seta{
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 36px;
+    cursor: pointer;
+    color: var(--cor1);
+    transition: .2s;
+    z-index: 1;
+}
+button.btn-seta:hover{
+    color: var(--cor2);
+    transform: scale(1.1);
+}
+section.controle{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.controle div{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.controle p{
+    font-size: 80px;
+    font-weight: bold;
+    color: var(--cor2);
+}
+div.position{
+    width: 50px;
+    height: 10px;
+    background-color: var(--cor2);
+    border-radius: 5px;
+}
+div.ativo{
+    background-color: var(--cor1);
+}
+
+@keyframes anime{
+    0%{
+        transform: scale(0.6);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/*----928PX-----*/
+@media screen and (max-width: 928px) {
+    
+    body{
+        height: 100dvh;
+    }
+    main{
+        height: 80dvh;
+    }
+    .imagem img{
+        width: 200px;
+    }
+}
+
+/*-------726PX------*/
+@media screen and (max-width: 726px){
+    main{
+        height: 310px;
+        background-color: var(--cor2);
+    }
+    header{
+        flex-direction: column;
+    }
+    header h1{
+        text-align: center;
+        background-color: var(--cor4);
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    .bloco{
+        flex-direction: column;
+        
+    }
+    .conteudo{
+        padding: 5px;
+    }
+    #contador{
+        font-size: 24px;
+        z-index: 9999;
+    }
+    div.position{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: var(--cor1);
+    }
+    div.ativo{
+        background-color: var(--cor4);
+    }
+    main::after{
+        z-index: 0;
+        opacity: 0;
+    }
+}

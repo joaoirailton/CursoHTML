@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Moveis Lar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <h1>Moveis Lar</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Principal</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contados</a></li>
+                <li><a href="#">Catálago</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="bloco ativa">
+            <div class="imagem">
+                <img src="foto1.png" alt="cadeira de almofada">
+            </div>
+            <div class="conteudo">
+                <h2>CADEIRA ALMOFADADA</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur suscipit commodi, expedita atque sunt voluptatum, dolores quas voluptas alias, vitae libero rerum amet magni facere architecto quisquam mollitia explicabo! Modi!</p>
+                <button class="btn-mais">Saiba Mais</button>
+            </div>
+        </section>
+        <section class="bloco">
+            <div class="imagem">
+                <img src="foto2.png" alt="rack para sala">
+            </div>
+            <div class="conteudo">
+                <h2>RACK SALA</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur suscipit commodi, expedita atque sunt voluptatum, dolores quas voluptas alias, vitae libero rerum amet magni facere architecto quisquam mollitia explicabo! Modi!</p>
+                <button class="btn-mais">Saiba Mais</button>
+            </div>
+        </section>
+        <section class="bloco">
+            <div class="imagem">
+                <img src="foto3.png" alt="armário cozinha">
+            </div>
+            <div class="conteudo">
+                <h2>ARMÁRIO COZINHA</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur suscipit commodi, expedita atque sunt voluptatum, dolores quas voluptas alias, vitae libero rerum amet magni facere architecto quisquam mollitia explicabo! Modi!</p>
+                <button class="btn-mais">Saiba Mais</button>
+            </div>
+        </section>
+
+        <section id="setas">
+            <button id="seta-left" class="btn-seta"><i class="fa-solid fa-circle-arrow-left"></i></button>
+            <button id="seta-right" class="btn-seta"><i class="fa-solid fa-circle-arrow-right"></i></button>
+        </section>
+        <section class="controle">
+            <div>
+                <p id="contador"></p>
+            </div>
+            <div>
+                <div class="position ativo"></div>
+                <div class="position"></div>
+                <div class="position"></div>
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
